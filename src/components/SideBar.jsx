@@ -88,7 +88,7 @@ const SideBarInfo = styled.div`
     > h4{
         display: flex;
         font-size: 10px;
-        font-weight: lighter;
+        font-weight: normal;
         align-items: center;
     }
 

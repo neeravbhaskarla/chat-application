@@ -29,7 +29,8 @@ const MessageContainer = styled.div`
 const MessageInfo = styled.div`
     padding-left: 10px;
     > h4{
-        font-weight: lighter;
+        color: #f7f7f7;
+        font-weight: normal;
         font-size: 15px;
     }
     > h4 >span{
@@ -39,7 +40,8 @@ const MessageInfo = styled.div`
         font-size: 10px;
     }
     > p{
+        color: #dddddd;
         font-size: 13px;
-        font-weight: lighter;
+        font-weight: normal;
     }
 `
