@@ -12,6 +12,9 @@ function ChatInput({channelName, roomId, chatRef}) {
     const avatar = useSelector(state=>state.user.avatar)
     const sendMessage = (e) =>{
         e.preventDefault()
+        if(input===''){
+            return;
+        }
         if(!roomId){
             return
         }
@@ -29,8 +32,8 @@ function ChatInput({channelName, roomId, chatRef}) {
     return (
         <ChatInputContainer>
             <form>
-                <input placeholder={`Message to #${channelName}`} onChange={(e)=>setInput(e.target.value)} value={input   }/>
-                <Button hidden type="submit" onClick={sendMessage} >
+                <input placeholder={`Message to #${channelName}`} onChange={(e)=>setInput(e.target.value)} value={input}/>
+                <Button hidden type="submit" onClick={sendMessage}>
                     Send
                 </Button>
             </form>
@@ -45,7 +48,8 @@ const ChatInputContainer = styled.div`
     > form {
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: 30px;
     }
     > form >input{
         font-family: 'Poppins', sans-serif;
@@ -57,6 +61,7 @@ const ChatInputContainer = styled.div`
         border: 1px solid #ccc;
         background-color: transparent;
         border-radius: 20px;
+        height: 15px;
         padding: 15px;
         :focus{
             transition: all 1s;
@@ -68,7 +73,20 @@ const ChatInputContainer = styled.div`
     }
 
     > form >button{
-        display: none !important;
+        position: fixed;
+        bottom: 30px;
+        border: 1px solid #ccc;
+        font-size: 0.8rem;
+        background-color: transparent;
+        height: 47px;
+        border-radius: 20px;
+        padding: 15px;
+        color: #aaa;
+        :hover{
+            background-color: #ccc;
+            color: #dvdvdv;
+        }
+        
     }
 
 `
