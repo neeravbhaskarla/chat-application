@@ -1,4 +1,4 @@
-# Group Chat Application with react
+# Group Chat Application with React
 
 This chat application is a modern and user-friendly platform that allows users to communicate with each other in real-time. It is built using React, a popular JavaScript library for building user interfaces, and Styled Components, a CSS-in-JS library that enables easy styling and theming of components.
 
